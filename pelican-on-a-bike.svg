@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" role="img" aria-label="A pelican riding a flying bicycle">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fd8fb"/>
+      <stop offset="1" stop-color="#eaf7ff"/>
+    </linearGradient>
+    <!-- a cloud shape reused several times -->
+    <g id="cloud">
+      <ellipse cx="0" cy="0" rx="56" ry="30" fill="#ffffff"/>
+      <ellipse cx="-40" cy="10" rx="40" ry="22" fill="#ffffff"/>
+      <ellipse cx="42" cy="8" rx="44" ry="24" fill="#ffffff"/>
+      <ellipse cx="0" cy="16" rx="60" ry="22" fill="#ffffff"/>
+    </g>
+    <!-- bike wing, reused mirrored -->
+    <g id="bikewing" fill="#fdfdfd" stroke="#d3ddef" stroke-width="2">
+      <path d="M0 0 C-70 -40 -150 -70 -210 -66 C-150 -30 -80 -6 0 16 Z"/>
+      <path d="M0 0 C-64 -18 -140 -26 -196 -8 C-134 6 -66 14 0 16 Z" fill="#eef4ff"/>
+    </g>
+  </defs>
+
+  <rect width="640" height="480" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="560" cy="70" r="46" fill="#ffe27a"/>
+  <circle cx="560" cy="70" r="60" fill="#ffe27a" opacity="0.35"/>
+
+  <!-- clouds -->
+  <use href="#cloud" x="110" y="90"/>
+  <use href="#cloud" x="470" y="150" transform="scale(0.8)" transform-origin="470 150"/>
+  <use href="#cloud" x="250" y="60" transform="scale(0.6)" transform-origin="250 60"/>
+  <use href="#cloud" x="60" y="300" transform="scale(0.7)" transform-origin="60 300"/>
+  <use href="#cloud" x="560" y="330" transform="scale(0.75)" transform-origin="560 330"/>
+
+  <!-- distant hills, now far below -->
+  <path d="M0 440 Q120 410 240 440 T480 435 T640 435 L640 480 L0 480 Z" fill="#bfe4c4"/>
+  <path d="M0 462 Q160 445 320 462 T640 458 L640 480 L0 480 Z" fill="#a7d8ae"/>
+
+  <!-- ===== everything flying sits in this group, lifted up ===== -->
+  <g transform="translate(0,-70)">
+    <!-- big feathered wings sprouting from the bike -->
+    <g stroke="#9fb4d8" stroke-width="2.5" stroke-linejoin="round">
+      <g transform="translate(300 300) rotate(-12)">
+        <path d="M0 0 C-70 -46 -150 -78 -214 -74 C-150 -34 -80 -8 0 18 Z" fill="#ffffff"/>
+        <path d="M0 0 C-66 -22 -142 -30 -200 -10 C-136 6 -66 16 0 18 Z" fill="#e6eefc"/>
+        <path d="M-4 2 C-60 -14 -120 -22 -186 -14" fill="none"/>
+        <path d="M-6 8 C-70 -2 -140 -8 -204 -34" fill="none"/>
+      </g>
+      <g transform="translate(300 300) scale(-1 1) rotate(-12)">
+        <path d="M0 0 C-70 -46 -150 -78 -214 -74 C-150 -34 -80 -8 0 18 Z" fill="#ffffff"/>
+        <path d="M0 0 C-66 -22 -142 -30 -200 -10 C-136 6 -66 16 0 18 Z" fill="#e6eefc"/>
+        <path d="M-4 2 C-60 -14 -120 -22 -186 -14" fill="none"/>
+        <path d="M-6 8 C-70 -2 -140 -8 -204 -34" fill="none"/>
+      </g>
+    </g>
+
+    <!-- motion / breeze lines -->
+    <g stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.75">
+      <line x1="40" y1="250" x2="120" y2="250"/>
+      <line x1="20" y1="285" x2="90" y2="285"/>
+      <line x1="55" y1="320" x2="125" y2="320"/>
+      <line x1="520" y1="240" x2="600" y2="240"/>
+      <line x1="540" y1="275" x2="610" y2="275"/>
+    </g>
+
+    <!-- ===== BICYCLE ===== -->
+    <g stroke="#333" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="200" cy="380" r="70"/>
+      <circle cx="440" cy="380" r="70"/>
+      <path d="M200 380 L300 380 L260 290 L200 380"/>
+      <path d="M300 380 L370 290 L260 290"/>
+      <path d="M370 290 L440 380"/>
+      <path d="M260 290 L250 265"/>
+      <path d="M370 290 L400 250"/>
+    </g>
+    <g fill="#666">
+      <circle cx="200" cy="380" r="8"/>
+      <circle cx="440" cy="380" r="8"/>
+    </g>
+    <g stroke="#9aa" stroke-width="2">
+      <line x1="200" y1="315" x2="200" y2="445"/>
+      <line x1="135" y1="380" x2="265" y2="380"/>
+      <line x1="154" y1="334" x2="246" y2="426"/>
+      <line x1="246" y1="334" x2="154" y2="426"/>
+      <line x1="440" y1="315" x2="440" y2="445"/>
+      <line x1="375" y1="380" x2="505" y2="380"/>
+      <line x1="394" y1="334" x2="486" y2="426"/>
+      <line x1="486" y1="334" x2="394" y2="426"/>
+    </g>
+    <path d="M232 258 q18 -12 36 0 q-18 8 -36 0 Z" fill="#5a3b1e"/>
+    <path d="M372 262 q28 -22 56 6" stroke="#333" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <circle cx="300" cy="380" r="10" fill="#333"/>
+    <line x1="300" y1="380" x2="285" y2="405" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+    <line x1="300" y1="380" x2="315" y2="355" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- ===== PELICAN ===== -->
+    <path d="M196 250 q-40 -6 -52 24 q30 6 52 -4 Z" fill="#f2f2f2" stroke="#cfcfcf" stroke-width="2"/>
+    <ellipse cx="250" cy="230" rx="64" ry="46" fill="#ffffff" stroke="#d8d8d8" stroke-width="2"/>
+
+    <path d="M270 210 q60 10 92 44 q-46 14 -96 -8 Z" fill="#f7f7f7" stroke="#d8d8d8" stroke-width="2"/>
+    <path d="M362 254 q16 -2 24 6" stroke="#cfcfcf" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <path d="M300 200 q26 -54 18 -92" stroke="#f0f0f0" stroke-width="26" fill="none" stroke-linecap="round"/>
+    <path d="M300 200 q26 -54 18 -92" stroke="#ffffff" stroke-width="20" fill="none" stroke-linecap="round"/>
+
+    <circle cx="322" cy="104" r="24" fill="#ffffff" stroke="#d8d8d8" stroke-width="2"/>
+    <circle cx="330" cy="98" r="5" fill="#222"/>
+    <circle cx="332" cy="96" r="2" fill="#fff"/>
+    <path d="M344 100 L420 108 L344 116 Z" fill="#ffb038" stroke="#e2901f" stroke-width="2"/>
+    <path d="M344 116 Q384 150 420 110 L344 112 Z" fill="#ffd06b" stroke="#e2901f" stroke-width="2"/>
+    <path d="M346 120 q10 8 22 4" stroke="#e2901f" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <g stroke="#f0a52b" stroke-width="9" fill="none" stroke-linecap="round">
+      <path d="M232 268 L240 380"/>
+      <path d="M268 268 L300 380"/>
+    </g>
+    <path d="M240 380 l-16 12 l16 2 l14 -2 Z" fill="#f0a52b"/>
+    <path d="M300 380 l-16 12 l16 2 l14 -2 Z" fill="#f0a52b"/>
+
+    <!-- a little pilot scarf fluttering behind for extra flying feeling -->
+    <path d="M306 182 q-52 -4 -100 12 q46 10 98 4 Z" fill="#ff5d5d" stroke="#e04848" stroke-width="2"/>
+    <path d="M300 186 q-38 26 -84 34 q40 4 84 -18 Z" fill="#ff7a7a" stroke="#e04848" stroke-width="2"/>
+  </g>
+</svg>
